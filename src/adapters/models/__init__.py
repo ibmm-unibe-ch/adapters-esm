@@ -16,6 +16,7 @@ from .clip.mixin_clip import (
 )
 from .deberta.mixin_deberta import DebertaModelAdaptersMixin
 from .distilbert.mixin_distilbert import DistilBertModelAdaptersMixin, DistilBertTransformerAdaptersMixin
+from .esm.mixin_esm import EsmLayerAdaptersMixin, EsmModelAdaptersMixin
 from .gpt2.mixin_gpt2 import GPT2ModelAdapterMixin
 from .gptj.mixin_gptj import GPTJMLPAdaptersMixin, GPTJModelAdapterMixin
 from .llama.mixin_llama import LlamaForQuestionAnsweringAdapterMixin, LlamaModelAdapterMixin
@@ -66,6 +67,8 @@ MODEL_MIXIN_MAPPING = {
     "CLIPVisionModelWithProjection": CLIPVisionModelAdaptersMixin,
     "ElectraLayer": BertLayerAdaptersMixin,
     "ElectraModel": BertModelAdaptersMixin,
+    "EsmLayer": EsmLayerAdaptersMixin,
+    "EsmModel": EsmModelAdaptersMixin,
     "MBartEncoder": BartEncoderAdaptersMixin,
     "MBartDecoder": BartDecoderAdaptersMixin,
     "MBartDecoderWrapper": BartDecoderWrapperAdaptersMixin,
